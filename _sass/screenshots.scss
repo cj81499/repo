@@ -1,0 +1,36 @@
+ul.screenshots {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+
+  li {
+    scroll-snap-align: start;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+
+    figure {
+      margin: 0;
+      width: min-content;
+      min-width: 10rem;
+
+      img {
+        border-radius: 0.5rem;
+        border: 1px solid $dark-gray;
+        height: 30rem;
+      }
+
+      figcaption {
+        font-size: 0.75rem;
+        text-align: center;
+        overflow-wrap: anywhere;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

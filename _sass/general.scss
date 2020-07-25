@@ -1,0 +1,23 @@
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: $dark-gray;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: $accent-2;
+
+  &:hover {
+    text-decoration: underline;
+    font-style: italic;
+  }
+}
+
+header,
+main,
+footer {
+  padding: 0 1.5rem;
+}

@@ -1,0 +1,9 @@
+<ul class="nav-links">
+  {% for link in include.links %}
+    <li {% if link.url == page.url %} class="active" {% endif %}>
+      <a href="{{ link.url | relative_url }}">
+        {{ link.name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

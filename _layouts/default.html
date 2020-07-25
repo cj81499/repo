@@ -1,0 +1,45 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      {% if page.url == "/" %}
+        {{ site.title }}
+      {% else %}
+        {{ page.title | default: site.title }}
+      {% endif %}
+    </title>
+
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    {% comment %}Styles{% endcomment %}
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ '/assets/css/style.css' | relative_url }}"
+      media="all"
+      rel="stylesheet"
+    />
+
+    {% comment %}Scripts{% endcomment %}
+    {% include scripts.html %}
+
+    {% comment %}Favicons{% endcomment %}
+    {% comment %}{% include favicons.html %}{% endcomment %}
+  </head>
+
+  <body>
+    {% unless page.noheader %} {% include header.html %} {% endunless %}
+    <main>
+      {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

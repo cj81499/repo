@@ -1,0 +1,30 @@
+---
+title: "BarelyRounded Changelog"
+changelog:
+  - number: "1.5"
+    date: "08/22/2016"
+    changes:
+      - "Added Docks"
+      - "Removed .psd's"
+  - number: "1.4"
+    date: "08/22/2016"
+    changes:
+      - "Switched to Anemone"
+  - number: "1.3"
+    date: "11/01/2015"
+    changes:
+      - "Optimized size"
+  - number: "1.2"
+    date: "10/26/2015"
+    changes:
+      - "Depiction Fix"
+  - number: "1.1"
+    date: "10/29/2015"
+    changes:
+      - "Improved depiction"
+      - "Anemone Folder Masking Changes"
+  - number: "1.0"
+    date: "10/07/2015"
+    changes:
+      - "Initial release"
+---

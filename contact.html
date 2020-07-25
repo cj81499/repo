@@ -1,0 +1,15 @@
+---
+title: "Contact"
+---
+
+{% for service in site.data.contact %}
+<p>
+  <i
+    class="{{ service.icon.class }}"
+    data-fa-transform="{{ service.icon.transform }}"
+    data-fa-mask="{{ service.icon.mask }}"
+  ></i>
+  {{ service.title }}
+  <a href="{{ service.link }}">{{ service.text }}</a>
+</p>
+{% endfor %}

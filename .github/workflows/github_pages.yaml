@@ -1,0 +1,27 @@
+name: Jekyll Build & Deploy
+
+on:
+  push:
+    branches: master
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup ruby
+        uses: ruby/setup-ruby@v1.40.0
+        with:
+          bundler-cache: true
+
+      - name: build
+        run: |
+          bundle exec jekyll build
+
+      - name: deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3.6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site

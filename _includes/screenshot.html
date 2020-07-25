@@ -1,0 +1,23 @@
+{% assign s = include.screenshot %}
+
+{% assign basename = s.basename %}
+{% unless basename %}
+    {%- capture basename -%}
+        {{ s.artist | default: "unknown" }}_{{ s.label }}
+    {%- endcapture -%}
+{% endunless %}
+
+{% assign img = site.static_files | find_exp: "file", "file.basename == basename" %}
+
+<figure>
+    <a href="{{ img.path | relative_url }}">
+        <img src="{{ img.path | relative_url }}" alt="{{ s.label }}">
+    </a>
+    <figcaption>
+        {% include link_if_exists.html content=s.label link=s.label_url %}
+        {% if s.artist %}
+            by
+            {% include link_if_exists.html content=s.artist link=s.artist_url %}
+        {% endif %}
+    </figcaption>
+</figure>

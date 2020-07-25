@@ -1,0 +1,37 @@
+// https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+
+@mixin width-up($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin height-up($height) {
+  @media only screen and (min-height: $height) {
+    @content;
+  }
+}
+
+@mixin sm-up {
+  @include width-up(600px) {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @include width-up(900px) {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @include width-up(1200px) {
+    @content;
+  }
+}
+
+@mixin xl-up {
+  @include width-up(1800px) {
+    @content;
+  }
+}

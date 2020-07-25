@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="changelog">
+    {% for version in page.changelog %}
+        <h2>
+            Version
+            {{ version.number }}
+            -
+            {{ version.date }}
+            {% if version.source %}
+                <a href="{{ version.source }}">[Source]</a>
+            {% endif %}
+        </h2>
+        <ul>
+            {% for change in version.changes %}
+                <li>{{ change }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</div>

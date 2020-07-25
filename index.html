@@ -1,0 +1,32 @@
+---
+title: "cj's Repo"
+---
+
+{% assign repo_url = page.url | absolute_url %}
+
+<p>You made it!</p>
+<p>
+  <i
+    class="fas fa-cube"
+    data-fa-mask="fas fa-circle"
+    data-fa-transform="shrink-5"
+  ></i>
+  <a
+    href="cydia://url/https://cydia.saurik.com/api/share#?source={{ repo_url }}"
+    >Add to Cydia</a
+  >
+</p>
+<p>
+  <i
+    class="fas fa-cube"
+    data-fa-mask="fas fa-circle"
+    data-fa-transform="shrink-5"
+  ></i>
+  <a href="zbra://sources/add/{{ repo_url }}">Add to Zebra</a>
+</p>
+<p>
+  <a href="./packages">Packages</a>
+</p>
+<p>
+  <a href="./help">Help</a>
+</p>
