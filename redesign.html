@@ -1,0 +1,48 @@
+---
+layout: redesign
+---
+
+{% assign repo_url = page.url | absolute_url %}
+
+<header>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>CJREPO</h1>
+      <p class="links">
+        <a
+          href="cydia://url/https://cydia.saurik.com/api/share#?source={{ repo_url }}"
+          >Add to Cydia</a
+        >
+        |
+        <a href="zbra://sources/add/{{ repo_url }}">Add to Zebra</a>
+      </p>
+    </div>
+
+    <div class="hero-img-wrapper">
+      <img
+        class="hero-img"
+        src="{{ '/assets/images/logo/Round/cj.svg' | relative_url }}"
+        alt="cj Logo"
+      />
+      <!-- <img
+        class="hero-img"
+        src="https://avatars2.githubusercontent.com/u/9152032?s=460&u=f6e3c64972c7f0e0db92985a1d7a99920b9b5139&v=4"
+        alt="cj Logo"
+      /> -->
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    TODO: PACKAGE GRID GOES HERE
+  </section>
+</main>
+
+<footer>
+  <p>
+    <a href="{{ '/help' | relative_url }}">Help</a> |
+    <a href="{{ '/contact' | relative_url }}">Contact</a> | &copy; 2020 Cal
+    Jacobson
+  </p>
+</footer>

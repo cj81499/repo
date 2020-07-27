@@ -1,0 +1,121 @@
+---
+---
+
+@import "util";
+
+:root {
+  --primary-color: #{$accent-1};
+  --secondary-color: #{$accent-2};
+
+  --text-color: #{$dark-gray};
+  --bg-color: #{$white};
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: hsl(270, 15%, 5%);
+    --text-color: #{$off-white};
+  }
+}
+
+html,
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+header {
+  $img-size: 10rem;
+  $img-padding: 2rem;
+  margin-bottom: $img-size / 2;
+
+  .links {
+    color: #{$dark-gray};
+    opacity: 60%;
+    a {
+      color: inherit;
+    }
+  }
+
+  .hero {
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hero-text {
+    color: white;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-top: 1rem;
+      margin-bottom: -1rem;
+
+      @include sm-up {
+        font-size: 6rem;
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+      }
+
+      @include md-up {
+        font-size: 8rem;
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+      }
+    }
+  }
+
+  .hero-img-wrapper {
+    margin-top: -6rem;
+    background: var(--bg-color);
+    height: $img-size + $img-padding;
+    width: $img-size + $img-padding;
+    border-radius: 100%;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include sm-up {
+      margin-top: -4rem;
+    }
+  }
+
+  .hero-img {
+    width: $img-size;
+    height: $img-size;
+    border-radius: 100%;
+  }
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+footer {
+  text-align: center;
+}
