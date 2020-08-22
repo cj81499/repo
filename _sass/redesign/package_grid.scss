@@ -1,0 +1,49 @@
+.package-grid {
+  $margin-lr: 0.5rem;
+  $margin-tb: 0.5rem;
+
+  $border-radius: 1rem;
+  $border-width: 0.25rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -#{$margin-tb} -#{$margin-lr};
+
+  .package {
+    box-sizing: border-box;
+    border: $border-width solid var(--card-border-color);
+    max-width: 100%;
+    width: 30rem;
+    margin: $margin-tb $margin-lr;
+    border-radius: $border-radius;
+  }
+
+  .img-container {
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      $border-radius-local: $border-radius - $border-width;
+
+      border-radius: $border-radius-local $border-radius-local 0 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .img-caption {
+    $border-radius-local: $border-radius - $border-width;
+
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--card-color);
+    border-radius: 0 0 $border-radius-local $border-radius-local;
+  }
+}

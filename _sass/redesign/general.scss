@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #{$accent-1};
+  --secondary-color: #{$accent-2};
+
+  --text-color: #{$dark-gray};
+  --bg-color: hsl(0, 0%, 92.5%);
+
+  --card-color: hsl(0, 0%, 97.5%);
+  --card-border-color: hsl(0, 0%, 95%);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #{darken($accent-1, 12.5%)};
+    --secondary-color: #{darken($accent-2, 12.5%)};
+
+    --text-color: #{$off-white};
+    --bg-color: hsl(0, 0%, 5%);
+
+    --card-color: hsl(0, 0%, 15%);
+    --card-border-color: hsl(0, 0%, 10%);
+  }
+}
+
+* {
+  transition: background 1s, color 1s, border 1s;
+}
+
+html,
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}

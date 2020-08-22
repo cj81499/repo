@@ -2,40 +2,53 @@
 layout: redesign
 ---
 
-{% assign repo_url = page.url | absolute_url %}
+<!-- prettier-ignore -->
+{% assign repo_url = '/' | absolute_url %}
+{% assign cydia_url = "cydia://url/https://cydia.saurik.com/api/share#?source=" | append: repo_url%}
+{% assign zebra_url = "zbra://sources/add/" | append: repo_url%}
 
-<header>
-  <div class="hero">
-    <div class="hero-text">
-      <h1>CJREPO</h1>
-      <p class="links">
-        <a
-          href="cydia://url/https://cydia.saurik.com/api/share#?source={{ repo_url }}"
-          >Add to Cydia</a
-        >
-        |
-        <a href="zbra://sources/add/{{ repo_url }}">Add to Zebra</a>
-      </p>
+<header class="header">
+  <img
+    class="header-img"
+    src="{{ '/assets/images/logo/Round/cj.svg' | relative_url }}"
+    alt="cj Logo"
+  />
+  <div class="header-text">
+    <div class="header-title">
+      <a href="{{ repo_url }}">
+        CJREPO
+      </a>
     </div>
-
-    <div class="hero-img-wrapper">
-      <img
-        class="hero-img"
-        src="{{ '/assets/images/logo/Round/cj.svg' | relative_url }}"
-        alt="cj Logo"
-      />
-      <!-- <img
-        class="hero-img"
-        src="https://avatars2.githubusercontent.com/u/9152032?s=460&u=f6e3c64972c7f0e0db92985a1d7a99920b9b5139&v=4"
-        alt="cj Logo"
-      /> -->
+    <div class="header-links">
+      <a href="{{ cydia_url }}">Add to Cydia</a>
+      <a href="{{ zebra_url }}">Add to Zebra</a>
     </div>
   </div>
 </header>
 
 <main>
-  <section>
-    TODO: PACKAGE GRID GOES HERE
+  <!-- prettier-ignore -->
+  <section class="package-grid">
+    <!-- TODO: Change sort order so popular packages are first -->
+    {% assign sorted_pkgs = site.packages | sort_natural: 'title' %}
+    {% for package in sorted_pkgs %}
+    <a href="{{ package.url | relative_url }}" class="package">
+      {% assign s = package.screenshots | first %}
+      {% assign basename = s.basename %}
+      {% unless basename %}
+        {%- capture basename -%}{{ s.artist | default: "unknown" }}_{{ s.label }}{%- endcapture -%}
+      {% endunless %}
+      {% assign img = site.static_files | find_exp: "file", "file.basename == basename" %}
+
+      <div class="img-container">
+        <img src="{{ img.path | relative_url }}" alt="{{ s.label }}" />
+      </div>
+
+      <div class="img-caption">
+        {{ package.title }} | {{ package.author }}
+      </div>
+    </a>
+    {% endfor %}
   </section>
 </main>
 

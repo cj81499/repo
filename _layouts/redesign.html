@@ -25,6 +25,8 @@ layout: compress
       {{ page.title | default: site.title }}
       {% endif %}
     </title>
+
+    {% include favicons.html %}
   </head>
   <body>
     {{content}}

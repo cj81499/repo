@@ -1,0 +1,86 @@
+header.header {
+  --header-height: 5rem;
+
+  padding: 1rem;
+  height: var(--header-height);
+  margin-bottom: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 0 0 1rem 1rem;
+
+  > :not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  img.header-img {
+    --header-img-padding: 0.25rem;
+
+    width: calc(var(--header-height) - 2 * var(--header-img-padding));
+    height: calc(var(--header-height) - 2 * var(--header-img-padding));
+    padding: var(--header-img-padding);
+    background: white;
+    border-radius: 100%;
+  }
+
+  .header-text {
+    height: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .header-title {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 0.8em;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-links {
+    opacity: 75%;
+    display: flex;
+    justify-content: center;
+
+    > :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@include sm-up {
+  header.header {
+    --header-height: 3rem;
+
+    img.header-img {
+      --header-img-padding: 0.125rem;
+    }
+
+    .header-text {
+      flex-direction: row;
+
+      > :not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+
+    .header-title {
+      font-size: 4rem;
+    }
+
+    .header-links {
+      flex-direction: column;
+
+      :not(:last-child) {
+        margin: 0;
+      }
+    }
+  }
+}

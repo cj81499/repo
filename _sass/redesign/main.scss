@@ -1,0 +1,14 @@
+@import "util/breakpoints";
+@import "util/colors";
+@import "redesign/general";
+@import "redesign/header";
+@import "redesign/package_grid";
+
+main {
+  flex-grow: 1;
+  padding: 0 2rem;
+}
+
+footer {
+  text-align: center;
+}
