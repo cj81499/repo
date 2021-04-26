@@ -1,6 +1,10 @@
 ---
 title: "Glyphs Changelog"
 changelog:
+  - number: "1.28.1"
+    date: "04/26/2021"
+    changes:
+      - "add new iCleaner bundleID"
   - number: "1.28.0"
     date: "04/26/2021"
     changes:

@@ -1,6 +1,10 @@
 ---
 title: "cjGlyphs Changelog"
 changelog:
+  - number: "1.54.1"
+    date: "04/26/2021"
+    changes:
+      - "Added Clock (mobiletimer) IconBundles image"
   - number: "1.54.0"
     date: "04/26/2021"
     changes:
