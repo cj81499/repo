@@ -62,6 +62,22 @@ Author: cj81499 <cjMakesIcons@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjGlyphs/
 Name: cjGlyphs
 
+Package: com.cj81499.cjGlyphs
+Version: 1.55.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard, com.tokems.Glyphs
+Filename: ./debs/com.cj81499.cjGlyphs_1_55_0.deb
+Size: 817520
+MD5sum: 16d0477c9c91b8ccc9ba2e4ddf28b04f
+SHA1: 3c30e680b57e571f089973fbc39ba6a8b93ee535
+SHA256: fe241d6d895b9726e73298a7c5eb7b3a154f470ed9fd794a0f872516573e4ee1
+Section: Themes
+Description: cj's Glyphs
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjGlyphs/
+Name: cjGlyphs
+
 Package: com.cj81499.cjLoader
 Version: 1.2.0
 Architecture: iphoneos-arm
