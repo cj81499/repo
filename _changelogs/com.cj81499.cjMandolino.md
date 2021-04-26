@@ -1,10 +1,16 @@
 ---
 title: "cjMandolino Changelog"
 changelog:
+  - number: "1.6.0"
+    date: "04/26/2021"
+    changes:
+      - "Improve Packaging"
+      - "Switch to Semantic Versioning"
+      - "Switch to SnowBoard"
   - number: "1.5"
     date: "8/22/2016"
     changes:
-      - "Switched to Anemone"
+      - "Switch to Anemone"
   - number: "1.4"
     date: "1/30/2016"
     changes:
