@@ -1,5 +1,5 @@
 Package: com.cj81499.cjGlyphs
-Version: 1.54.1
+Version: 1.55.0
 Architecture: iphoneos-arm
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
 Depends: com.spark.snowboard, com.tokems.Glyphs
