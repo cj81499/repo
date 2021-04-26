@@ -46,6 +46,22 @@ Author: cj81499 <cjMakesIcons@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjGlyphs/
 Name: cjGlyphs
 
+Package: com.cj81499.cjGlyphs
+Version: 1.54.1
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard, com.tokems.Glyphs
+Filename: ./debs/com.cj81499.cjGlyphs_1_54_1.deb
+Size: 782920
+MD5sum: daa7cc3d8e780d62bbfe36620cc7b67a
+SHA1: 3413e46bbf366d1e4ab0d4f89042a64ddfbee4b1
+SHA256: 3c43bd7c1ec07852778ccaf96db200a29be368841aa3966805bedecc44b6052d
+Section: Themes
+Description: cj's Glyphs
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjGlyphs/
+Name: cjGlyphs
+
 Package: com.cj81499.cjLoader
 Version: 1.2.0
 Architecture: iphoneos-arm
@@ -136,6 +152,22 @@ Size: 300648
 MD5sum: b15be8d49c0d086b00d5a3fada33db29
 SHA1: 627e76b967453c197482207bd50481b3444ba5b9
 SHA256: f3b0d3e7502df9bf0fd71927fe94b8bfff800147a90affb313ccafa9844d95c6
+Section: Themes
+Description: tokems' Glyphs
+Author: tokems <tokems.0@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.tokems.Glyphs/
+Name: Glyphs
+
+Package: com.tokems.Glyphs
+Version: 1.28.1
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.tokems.Glyphs_1_28_1.deb
+Size: 300724
+MD5sum: 7788c4c134d8469b78cd768259159db3
+SHA1: 788352d53e985b5bc0edc041fa3a9470703a5a1c
+SHA256: 11acb2e35d6ca4d48d06a39a44ae8258cdee8e8af43021588632c41c34e5b539
 Section: Themes
 Description: tokems' Glyphs
 Author: tokems <tokems.0@gmail.com>
