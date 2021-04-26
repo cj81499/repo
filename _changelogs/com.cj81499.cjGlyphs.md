@@ -1,6 +1,11 @@
 ---
 title: "cjGlyphs Changelog"
 changelog:
+  - number: "1.54.0"
+    date: "04/26/2021"
+    changes:
+      - "Improve Packaging"
+      - "Switch to SnowBoard"
   - number: "1.53.1"
     date: "05/14/2020"
     changes:
@@ -184,7 +189,7 @@ changelog:
   - number: "1.47"
     date: "08/22/2016"
     changes:
-      - "Switched to Anemone"
+      - "Switch to Anemone"
   - number: "1.46"
     date: "08/17/2016"
     changes:
