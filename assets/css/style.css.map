@@ -3,14 +3,14 @@
 	"file": "style.css",
 	"sources": [
 		"style.scss",
-		"_sass/main.scss",
-		"_sass/util.scss",
-		"_sass/util/breakpoints.scss",
-		"_sass/util/colors.scss",
-		"_sass/general.scss",
-		"_sass/header.scss",
-		"_sass/footer.scss",
-		"_sass/screenshots.scss"
+		"jekyll/_sass/main.scss",
+		"jekyll/_sass/util.scss",
+		"jekyll/_sass/util/breakpoints.scss",
+		"jekyll/_sass/util/colors.scss",
+		"jekyll/_sass/general.scss",
+		"jekyll/_sass/header.scss",
+		"jekyll/_sass/footer.scss",
+		"jekyll/_sass/screenshots.scss"
 	],
 	"sourcesContent": [
 		"@import \"main\";\n",
