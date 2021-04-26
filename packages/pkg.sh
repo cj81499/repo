@@ -1,4 +1,5 @@
 #!/bin/sh
+# create a deb file for a given package
 
 # check for args
 if [ $# -ne 2 ]; then
