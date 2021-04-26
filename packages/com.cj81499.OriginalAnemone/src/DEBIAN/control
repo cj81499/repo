@@ -1,0 +1,10 @@
+Package: com.cj81499.OriginalAnemone
+Version: 1.2.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.anemonetheming.anemone
+Section: Themes
+Description: Original Anemone Icon
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.OriginalAnemone/
+Name: Original Anemone

@@ -1,0 +1,10 @@
+Package: com.highdetalio.SpaceBlueBerry
+Version: 1.9.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Section: Themes
+Description: highdetalio's Space BlueBerry
+Author: highdetalio <gionata.bottari@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.highdetalio.SpaceBlueBerry/
+Name: Space BlueBerry

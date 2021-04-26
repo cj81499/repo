@@ -1,0 +1,10 @@
+Package: com.tokems.Glyphs
+Version: 1.28.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Section: Themes
+Description: tokems' Glyphs
+Author: tokems <tokems.0@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.tokems.Glyphs/
+Name: Glyphs

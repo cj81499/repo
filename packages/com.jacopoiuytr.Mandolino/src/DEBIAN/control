@@ -1,0 +1,10 @@
+Package: com.jacopoiuytr.Mandolino
+Version: 1.6.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Section: Themes
+Description: jacopoiuytr's Mandolino
+Author: jacopoiuytr <jacopocastagno@hotmail.it>
+Depiction: https://cj81499.github.io/repo/depictions/com.jacopoiuytr.Mandolino/
+Name: Mandolino
