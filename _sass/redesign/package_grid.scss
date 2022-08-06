@@ -2,8 +2,9 @@
   $margin-lr: 0.5rem;
   $margin-tb: 0.5rem;
 
+  $border-width: 2px;
   $border-radius: 1rem;
-  $border-width: 0.25rem;
+  $border-radius-inner: calc(#{$border-radius} - #{$border-width});
 
   display: flex;
   flex-wrap: wrap;
@@ -12,11 +13,19 @@
 
   .package {
     box-sizing: border-box;
-    border: $border-width solid var(--card-border-color);
+    border: $border-width solid var(--secondary-color);
     max-width: 100%;
     width: 30rem;
     margin: $margin-tb $margin-lr;
     border-radius: $border-radius;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      box-shadow: 0 10px 10px 0 rgba($color: black, $alpha: 0.2);
+    }
   }
 
   .img-container {
@@ -25,9 +34,7 @@
     overflow: hidden;
 
     img {
-      $border-radius-local: $border-radius - $border-width;
-
-      border-radius: $border-radius-local $border-radius-local 0 0;
+      border-radius: $border-radius-inner $border-radius-inner 0 0;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -36,14 +43,12 @@
   }
 
   .img-caption {
-    $border-radius-local: $border-radius - $border-width;
-
     height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: var(--card-color);
-    border-radius: 0 0 $border-radius-local $border-radius-local;
+    border-radius: 0 0 $border-radius-inner $border-radius-inner;
   }
 }
