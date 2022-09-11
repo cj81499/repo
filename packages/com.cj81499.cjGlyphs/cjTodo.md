@@ -1,12 +1,10 @@
-# Todo
+# TODO
 
-## u/cj81499
-
-### Add
+## Add
 
 - Settings Icons (Belongs in Glyphs rather than cjGlyphs?)
 
-### Redesign
+## Redesign
 
 - SnapStats (com.quynh.SnapStats)
 - Measure (com.apple.measure)

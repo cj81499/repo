@@ -1,0 +1,39 @@
+{
+    "name": "repo",
+    "version": "1.0.0",
+    "description": "cj81499's Cydia Repo",
+    "scripts": {
+        "build": "npx @11ty/eleventy",
+        "dev": "npx @11ty/eleventy --serve",
+        "format": "npx prettier . --write",
+        "check-format": "npx prettier . --check",
+        "validate-html": "npx w3c-html-validator _site"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cj81499/repo.git"
+    },
+    "keywords": [
+        "Cydia",
+        "Zebra",
+        "Apple",
+        "iOS",
+        "jailbreak",
+        "iPhone",
+        "iPod",
+        "iPad",
+        "theme"
+    ],
+    "author": "Cal Jacobson",
+    "bugs": {
+        "url": "https://github.com/cj81499/repo/issues"
+    },
+    "homepage": "https://github.com/cj81499/repo#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^1.0.2",
+        "@11ty/eleventy-navigation": "^0.3.5",
+        "@11ty/eleventy-plugin-directory-output": "^1.0.1",
+        "prettier": "^2.7.1",
+        "w3c-html-validator": "^1.1.1"
+    }
+}
