@@ -1,0 +1,51 @@
+name: Deploy Jekyll site to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Install node dependencies
+        run: npm ci
+      # TODO: build debs, Packages, and Packages.gz
+      # Should this be handled by eleventy or a separate job/stage?
+      - name: Build with 11ty
+        run: npm run build -- --pathprefix='${{ steps.pages.outputs.base_path }}'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

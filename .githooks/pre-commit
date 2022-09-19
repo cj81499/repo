@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# If Packages has staged changes
-if git status -s | grep -c -q "M. jekyll/Packages";
-then
-    # Update Packages.gz to match
-    gzip jekyll/Packages -k -f
-    git add jekyll/Packages.gz
-fi

@@ -1,9 +1,0 @@
-Origin: cj81499's Cydia Repo
-Label: cj81499's Cydia Repo
-Suite: stable
-Version: 1.0
-Codename: beepboopbop
-Architectures: iphoneos-arm
-Components: main
-Description: cj81499's Cydia Repo
-Icon: file://CydiaIcon.png

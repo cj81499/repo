@@ -1,0 +1,153 @@
+:root {
+    color-scheme: dark light;
+
+    --bg-color: #111;
+    --fg-color: #eee;
+
+    --accent1: #27c;
+    --accent2: #3c7;
+
+    /* --accent3: #95d; */
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #fff;
+        --fg-color: #333;
+
+        --accent1: #39e;
+        --accent2: #0c9;
+    }
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--fg-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    color: var(--fg-color);
+}
+
+a {
+    color: var(--accent2);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: var(--accent1) wavy underline;
+}
+
+header {
+    color: white;
+    background: var(--accent1);
+}
+
+header {
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+header a.logo {
+    display: flex;
+    justify-content: center;
+}
+
+header a.logo img {
+    width: 2rem;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    color: inherit;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+nav ul li a:hover {
+    background: var(--accent2);
+    text-decoration: none;
+}
+
+nav ul li ul {
+    position: absolute;
+    flex-direction: column;
+    display: none;
+    background: var(--accent1);
+}
+
+nav ul li:hover ul {
+    display: unset;
+}
+
+nav ul li ul a {
+    padding: 0.25rem 1rem;
+    justify-content: start;
+}
+
+.container {
+    max-width: 800px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* screenshot gallery */
+
+.screenshot-gallery {
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+}
+
+.screenshot-gallery figure {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    scroll-snap-align: center;
+    /* max-width: min(80vw, 20rem); */
+}
+
+.screenshot-gallery figcaption {
+    text-align: center;
+}
+
+.screenshot-gallery img {
+    border-radius: 0.5rem;
+    border: 1px solid var(--fg-color);
+    max-height: min(80vh, 40rem);
+    max-width: 80vw;
+}

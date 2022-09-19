@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark light" />
+        <meta name="description" content="cj81499's Cydia Repo" />
+        <link rel="stylesheet" href="{{ '/assets/styles/style.css' | url }}" />
+
+        <!-- TODO: favicon -->
+        <!-- https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs -->
+        <!-- https://favicon.io/ -->
+
+        <title>{{ site.title }}</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container flex">
+                <a class="logo" href="{{ '/' | url }}">
+                    <img src="{{ '/assets/images/logo/cj.svg' | url }}" alt="cj Logo" />
+                </a>
+                <nav>
+                    <!-- prettier-ignore -->
+                    {{
+                        collections.all
+                        | eleventyNavigation
+                        | eleventyNavigationToHtml({
+                            activeListItemClass: "active",
+                            activeKey: eleventyNavigation.key
+                        })
+                        | safe
+                    }}
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1>{{ title }}</h1>
+                {{ content | safe }}
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">&copy; 2022 <a href="{{ '/contact' | url }}"> Cal Jacobson </a></div>
+        </footer>
+    </body>
+</html>

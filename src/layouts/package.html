@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<p>by: <a href="{{ authorUrl | url }}">{{ author }}</a></p>
+
+{{ content | safe }}
+
+<h2>Screenshots</h2>
+{% if screenshots %}
+<!-- prettier-ignore -->
+<div class="screenshot-gallery">
+    {% for s in screenshots %}
+        <figure>
+            <img src="{{ s.path | url }}" alt="{{ s.label }}">
+            <figcaption>
+                {% if s.artistUrl %}
+                    <a href="{{ s.artistUrl | url }}">{{ s.artist }}</a>
+                {% else %}
+                    {{ s.artist }}
+                {% endif %}
+                -
+                {% if s.labelUrl %}
+                    <a href="{{ s.labelUrl | url }}">{{ s.label }}</a>
+                {% else %}
+                    {{ s.label }}
+                {% endif %}
+            </figcaption>
+        </figure>
+    {% endfor %}
+</div>
+{% else %}
+<p>No screenshots :(</p>
+{% endif %}
+
+    <details>
+        <summary>
+            <!-- <h2 style="display: inline-block"> -->
+            Changelog
+            <!-- </h2> -->
+        </summary>
+        {% for version in changelog %}
+        <h3>
+            <!-- prettier-ignore -->
+            Version {{ version.number }} - {{ version.date }}
+        {% if version.source %}
+            <a href="{{ version.source }}">[source]</a>
+            {% endif %}
+        </h3>
+        <ul>
+            {% for change in version.changes %}
+            <li>{{ change }}</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </details>
+</h2>
