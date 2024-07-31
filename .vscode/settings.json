@@ -1,0 +1,14 @@
+{
+    "search.exclude": {
+        "MODULE.bazel.lock": true,
+        ".aspect/bazelrc": true
+    },
+    "cSpell.words": [
+        "runfile",
+        "runfiles"
+    ],
+    "files.associations": {
+        ".envrc*": "shellscript",
+        ".bazelrc": "shellscript"
+    },
+}

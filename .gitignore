@@ -1,3 +1,6 @@
-.jekyll-cache/
+bazel-*
+
 _site/
-.vscode/
+.venv/
+
+old/

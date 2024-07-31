@@ -14,6 +14,38 @@ Author: cj81499 <cjMakesIcons@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.BarelyRounded/
 Name: Barely Rounded Icon Mask
 
+Package: com.cj81499.BarelyRounded
+Version: 2.0.0
+Architecture: iphoneos-arm64
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.BarelyRounded-2.0.0-iphoneos-arm64.deb
+Size: 3796
+MD5sum: 071c449ed112c4d183d82d23f3754954
+SHA1: 92f57f6045d2e4a169174c23e4b987cbe154f98f
+SHA256: 6d54f26382296726048a3bf0bcb5fed15b531fc6d4e39cd883cc9c026551681b
+Section: Themes
+Description: Barely Rounded Icon Mask
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.BarelyRounded/
+Name: Barely Rounded Icon Mask
+
+Package: com.cj81499.BarelyRounded
+Version: 2.0.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.BarelyRounded-2.0.0-iphoneos-arm.deb
+Size: 3760
+MD5sum: fbea0d930b4d74b4a099f6a1141e0373
+SHA1: 7e9da7419d9ba63d14e4ceeaf271afc929281a32
+SHA256: b30ff419ad2432c6bbda2bf611c84aaf7e0b8f895a64f418fac5c8b40710e2ff
+Section: Themes
+Description: Barely Rounded Icon Mask
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.BarelyRounded/
+Name: Barely Rounded Icon Mask
+
 Package: com.cj81499.OriginalAnemone
 Version: 1.2.0
 Architecture: iphoneos-arm

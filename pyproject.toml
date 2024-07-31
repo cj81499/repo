@@ -1,0 +1,6 @@
+[tool.ruff]
+line-length = 120
+
+[tool.pyright]
+exclude = ["**/node_modules", "**/__pycache__", "**/.*", "**/bazel-*"]
+extraPaths = ["bazel-repo/external/rules_python~"]
