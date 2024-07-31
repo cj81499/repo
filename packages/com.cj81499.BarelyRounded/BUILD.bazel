@@ -1,0 +1,43 @@
+load("@rules_pkg//pkg:tar.bzl", "pkg_tar")
+load("//tools/pkg:deb.bzl", "pkg_deb")
+
+PACKAGE_NAME = "com.cj81499.BarelyRounded"
+
+VERSION = "2.0.0"
+
+# TODO: find some way to easily switch between these. Possibly w/:
+# - https://bazel.build/extending/platforms
+# - https://bazel.build/extending/config
+
+# ROOTFUL
+arch, prefix = "iphoneos-arm", ""
+
+# # ROOTLESS
+# arch, prefix = "iphoneos-arm64", "var/jb"
+
+pkg_tar(
+    name = "data",
+    srcs = glob(["Library/**"]),
+    extension = "tar.xz",
+    package_dir = prefix,
+    strip_prefix = ".",
+)
+
+pkg_deb(
+    name = "%s" % PACKAGE_NAME,
+    out = "%s-%s-%s.deb" % (PACKAGE_NAME, VERSION, arch),
+    control = [
+        "Package: %s" % PACKAGE_NAME,
+        "Version: %s" % VERSION,
+        "Architecture: %s" % arch,
+        "Maintainer: cj81499 <cjMakesIcons@gmail.com>",
+        "Depends: com.spark.snowboard",
+        "Section: Themes",
+        "Description: Barely Rounded Icon Mask",
+        "Author: cj81499 <cjMakesIcons@gmail.com>",
+        "Depiction: https://cj81499.github.io/repo/depictions/%s/" % PACKAGE_NAME,
+        "Name: Barely Rounded Icon Mask",
+        "",
+    ],
+    data = ":data",
+)

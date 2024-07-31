@@ -1,0 +1,47 @@
+"Bazel dependencies"
+
+# ====================
+# === bazel_skylib ===
+# ====================
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
+# bazel_dep(name = "bazel_skylib_gazelle_plugin", version = "1.7.1", dev_dependency = True)
+
+# # =================
+# # === rules_pkg ===
+# # =================
+bazel_dep(name = "rules_pkg", version = "1.0.1")
+
+# ====================
+# === rules_python ===
+# ====================
+bazel_dep(name = "rules_python", version = "0.34.0")
+PY_VERSION = "3.12"
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.toolchain(
+    python_version = PY_VERSION,
+    is_default = True,
+    # configure_coverage_tool = True, # https://rules-python.readthedocs.io/en/latest/coverage.html
+)
+pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pip.parse(
+    hub_name = "pip",
+    python_version = PY_VERSION,
+    requirements_lock = "//:py_requirements_lock.txt",
+)
+use_repo(pip, "pip")
+# TODO: gazelle plugin
+
+# ========================
+# === aspect_bazel_lib ===
+# ========================
+bazel_dep(name = "aspect_bazel_lib", version = "2.7.9")
+
+# TODO
+# =========================
+# === aspect_rules_lint ===
+# =========================
+# bazel_dep(name = "aspect_rules_lint", version = "1.0.0-rc7")
+
+# # Next, follow the install instructions for
+# # - linting: https://github.com/aspect-build/rules_lint/blob/v1.0.0-rc7/docs/linting.md
+# # - formatting: https://github.com/aspect-build/rules_lint/blob/v1.0.0-rc7/docs/formatting.md
