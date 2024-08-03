@@ -5,31 +5,27 @@ PACKAGE_NAME = "com.cj81499.BarelyRounded"
 
 VERSION = "2.0.0"
 
-# TODO: find some way to easily switch between these. Possibly w/:
-# - https://bazel.build/extending/platforms
-# - https://bazel.build/extending/config
-
-# ROOTFUL
-arch, prefix = "iphoneos-arm", ""
-
-# # ROOTLESS
-# arch, prefix = "iphoneos-arm64", "var/jb"
-
 pkg_tar(
     name = "data",
     srcs = glob(["Library/**"]),
     extension = "tar.xz",
-    package_dir = prefix,
+    package_dir = select({
+        "//packages:rootful": "",
+        "//packages:rootless": "var/jb",
+    }),
     strip_prefix = ".",
 )
 
 pkg_deb(
     name = "%s" % PACKAGE_NAME,
-    out = "%s-%s-%s.deb" % (PACKAGE_NAME, VERSION, arch),
+    out = "%s-%s.deb" % (PACKAGE_NAME, VERSION),
     control = [
         "Package: %s" % PACKAGE_NAME,
         "Version: %s" % VERSION,
-        "Architecture: %s" % arch,
+    ] + select({
+        "//packages:rootful": ["Architecture: iphoneos-arm"],
+        "//packages:rootless": ["Architecture: iphoneos-arm64"],
+    }) + [
         "Maintainer: cj81499 <cjMakesIcons@gmail.com>",
         "Depends: com.spark.snowboard",
         "Section: Themes",

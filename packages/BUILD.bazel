@@ -1,0 +1,23 @@
+load("@bazel_skylib//rules:common_settings.bzl", "string_flag")
+
+string_flag(
+    name = "jailbreak_type",
+    build_setting_default = "rootless",
+    values = [
+        "rootless",
+        "rootful",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+config_setting(
+    name = "rootless",
+    flag_values = {":jailbreak_type": "rootless"},
+    visibility = ["//visibility:public"],
+)
+
+config_setting(
+    name = "rootful",
+    flag_values = {":jailbreak_type": "rootful"},
+    visibility = ["//visibility:public"],
+)

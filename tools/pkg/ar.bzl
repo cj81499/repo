@@ -5,6 +5,7 @@ def _pkg_ar_impl(ctx):
     # FIXME: we assume that `ar` is installed and on PATH.
     # Ideally, we should either write our own ar archive from scratch or provide
     # the `ar` executable somehow.
+    # FIXME: ar is "noisy" even when it works succesfully.
     ctx.actions.run(
         outputs = [out],
         inputs = srcs,

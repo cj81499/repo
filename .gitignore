@@ -1,6 +1,6 @@
 bazel-*
+.aspect/bazelrc/user.bazelrc
 
-_site/
 .venv/
 
-old/
+_site/
