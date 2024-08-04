@@ -4,7 +4,7 @@ changelog:
   - number: "2.0.0"
     date: "07/31/2024"
     changes:
-      - "Release for both rootful and rootless"
+      - "Support both rootful and rootless jailbreaks"
       - "Build packages with Bazel"
   - number: "1.6.0"
     date: "04/26/2021"

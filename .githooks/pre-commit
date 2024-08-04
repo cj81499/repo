@@ -1,9 +1,13 @@
 #!/bin/sh
 
-# If Packages has staged changes
-if git status -s | grep -c -q "M. jekyll/Packages";
-then
-    # Update Packages.gz to match
+# FIXME: "bazel-ify"
+
+# Update jekyll/Packages
+( cd jekyll && dpkg-scanpackages --multiversion ./debs > Packages 2> /dev/null )
+git add jekyll/Packages
+
+# if jekyll/Packages was changed, update jekyll/Packages.gz to match
+if git status --porcelain | grep jekyll/Packages > /dev/null; then
     gzip jekyll/Packages -k -f
     git add jekyll/Packages.gz
 fi

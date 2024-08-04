@@ -1,6 +1,11 @@
 ---
 title: "cjGlyphs Changelog"
 changelog:
+  - number: "2.0.0"
+    date: "08/03/2024"
+    changes:
+      - "Support both rootful and rootless jailbreaks"
+      - "Build packages with Bazel"
   - number: "1.55.0"
     date: "04/26/2021"
     changes:
