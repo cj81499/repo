@@ -27,7 +27,7 @@ pkg_deb(
         "//packages:rootless": ["Architecture: iphoneos-arm64"],
     }) + [
         "Maintainer: cj81499 <cjMakesIcons@gmail.com>",
-        "Depends: com.spark.snowboard, com.tokems.Glyphs",
+        "Depends: com.spark.snowboard, com.tokems.glyphs",
         "Section: Themes",
         "Description: cj's Glyphs",
         "Author: cj81499 <cjMakesIcons@gmail.com>",

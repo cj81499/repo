@@ -162,12 +162,12 @@ Package: com.cj81499.cjglyphs
 Version: 2.0.0
 Architecture: iphoneos-arm64
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard, com.tokems.Glyphs
+Depends: com.spark.snowboard, com.tokems.glyphs
 Filename: ./debs/com.cj81499.cjglyphs-2.0.0-iphoneos-arm64.deb
 Size: 817652
-MD5sum: 1e97ef04be9a36dc27fa388a88da4a24
-SHA1: 579238a7b8934d7feb5171eb2b343fca41920baf
-SHA256: 22bfa40219243aface372f2e19f554215d3651afdeca7e607de99469511a2b23
+MD5sum: ca54502e2d06772d83251d3281a95314
+SHA1: 47a9b6be4e1048ce31f0b542ad69cec07c25494c
+SHA256: 247bf5aa3b571d65f09cb2a6a68621414ae39556a3122b255489bc06414a3351
 Section: Themes
 Description: cj's Glyphs
 Author: cj81499 <cjMakesIcons@gmail.com>
@@ -178,12 +178,12 @@ Package: com.cj81499.cjglyphs
 Version: 2.0.0
 Architecture: iphoneos-arm
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard, com.tokems.Glyphs
+Depends: com.spark.snowboard, com.tokems.glyphs
 Filename: ./debs/com.cj81499.cjglyphs-2.0.0-iphoneos-arm.deb
 Size: 816904
-MD5sum: 11cb90329da00d0744585e8c58e1c003
-SHA1: 5ba8afca5b32f485870d5081be06f384b1d42eb4
-SHA256: 651f6cd0c2efb2dbd0116d977c021ce360255cc0782443c97d232c21aaed762f
+MD5sum: 6b33d3b627af9e36bb28124fe86d0480
+SHA1: 4e436612baa014cb4ed67756ca0e389c1ef8f869
+SHA256: 5043f0e0c2c9a6ca2cb4646898ce6ba940173416713d075dec642a3829c3f964
 Section: Themes
 Description: cj's Glyphs
 Author: cj81499 <cjMakesIcons@gmail.com>
