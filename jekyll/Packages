@@ -14,38 +14,6 @@ Author: cj81499 <cjMakesIcons@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.BarelyRounded/
 Name: Barely Rounded Icon Mask
 
-Package: com.cj81499.BarelyRounded
-Version: 2.0.0
-Architecture: iphoneos-arm64
-Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard
-Filename: ./debs/com.cj81499.BarelyRounded-2.0.0-iphoneos-arm64.deb
-Size: 3796
-MD5sum: 071c449ed112c4d183d82d23f3754954
-SHA1: 92f57f6045d2e4a169174c23e4b987cbe154f98f
-SHA256: 6d54f26382296726048a3bf0bcb5fed15b531fc6d4e39cd883cc9c026551681b
-Section: Themes
-Description: Barely Rounded Icon Mask
-Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.BarelyRounded/
-Name: Barely Rounded Icon Mask
-
-Package: com.cj81499.BarelyRounded
-Version: 2.0.0
-Architecture: iphoneos-arm
-Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard
-Filename: ./debs/com.cj81499.BarelyRounded-2.0.0-iphoneos-arm.deb
-Size: 3760
-MD5sum: fbea0d930b4d74b4a099f6a1141e0373
-SHA1: 7e9da7419d9ba63d14e4ceeaf271afc929281a32
-SHA256: b30ff419ad2432c6bbda2bf611c84aaf7e0b8f895a64f418fac5c8b40710e2ff
-Section: Themes
-Description: Barely Rounded Icon Mask
-Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.BarelyRounded/
-Name: Barely Rounded Icon Mask
-
 Package: com.cj81499.OriginalAnemone
 Version: 1.2.0
 Architecture: iphoneos-arm
@@ -61,6 +29,38 @@ Description: Original Anemone Icon
 Author: cj81499 <cjMakesIcons@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.OriginalAnemone/
 Name: Original Anemone
+
+Package: com.cj81499.barelyrounded
+Version: 2.0.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.barelyrounded-2.0.0-iphoneos-arm.deb
+Size: 3764
+MD5sum: b53ec94664bc6597eb3db47ffaf08c65
+SHA1: 839c45f0a043f8715af5745387762030102720be
+SHA256: 4061913cbe81065580a1e9b0421a674402816c79ab6efa48526876a534ae45ad
+Section: Themes
+Description: Barely Rounded Icon Mask
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.barelyrounded/
+Name: Barely Rounded Icon Mask
+
+Package: com.cj81499.barelyrounded
+Version: 2.0.0
+Architecture: iphoneos-arm64
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.barelyrounded-2.0.0-iphoneos-arm64.deb
+Size: 3796
+MD5sum: 2e039013ca286bc06dedc5b39fdf2638
+SHA1: c427f4461bc64ecc068d90213b63d7a83ac7bd88
+SHA256: 0fdee0a323f7a609b4ea9ab3a95dbd78be6e93df1744ccaea48a94686911472e
+Section: Themes
+Description: Barely Rounded Icon Mask
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.barelyrounded/
+Name: Barely Rounded Icon Mask
 
 Package: com.cj81499.cjGlyphs
 Version: 1.54.0
@@ -110,38 +110,6 @@ Author: cj81499 <cjMakesIcons@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjGlyphs/
 Name: cjGlyphs
 
-Package: com.cj81499.cjGlyphs
-Version: 2.0.0
-Architecture: iphoneos-arm
-Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard, com.tokems.Glyphs
-Filename: ./debs/com.cj81499.cjGlyphs-2.0.0-iphoneos-arm.deb
-Size: 816904
-MD5sum: c77834ec281bfc1bab941d9c6492a37a
-SHA1: 2d0d4a2583fc5061f9b2e88d0277a35db79846a1
-SHA256: e4d6e9f7978fafa1b18ccc3a2bc9f64fc5a6646269a171c1b95e81c347266fcc
-Section: Themes
-Description: cj's Glyphs
-Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjGlyphs/
-Name: cjGlyphs
-
-Package: com.cj81499.cjGlyphs
-Version: 2.0.0
-Architecture: iphoneos-arm64
-Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard, com.tokems.Glyphs
-Filename: ./debs/com.cj81499.cjGlyphs-2.0.0-iphoneos-arm64.deb
-Size: 817652
-MD5sum: 136d7b098367a9d61e5d6a07f91deaea
-SHA1: e0304952d0d89ce35b046fbf84d0f83d31c6bfd8
-SHA256: 443c6563f0fdc5d18fc47a361915a6258925ab278b9be3e643e0b85f8286c7fb
-Section: Themes
-Description: cj's Glyphs
-Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjGlyphs/
-Name: cjGlyphs
-
 Package: com.cj81499.cjLoader
 Version: 1.2.0
 Architecture: iphoneos-arm
@@ -152,38 +120,6 @@ Size: 27016
 MD5sum: 64974a6cfacd194ab810a9ce52ce1eec
 SHA1: edc7f5c3990f94b94b88c08baf1e69443cfbd2c6
 SHA256: 90a9a53e87bad4bf2075720463b22296ec7605849203f4069d904b889a7f3858
-Section: Themes
-Description: cj's Loading Animations
-Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjLoader/
-Name: cjLoader
-
-Package: com.cj81499.cjLoader
-Version: 2.0.0
-Architecture: iphoneos-arm
-Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard
-Filename: ./debs/com.cj81499.cjLoader-2.0.0-iphoneos-arm.deb
-Size: 26956
-MD5sum: 07d78fbda6718e9dd11dbc2ac711cb31
-SHA1: 29d790bd9ca7a711c2cca333f609f3ef69f6299d
-SHA256: 4755c40f4cb7574866f715e7d468e962350c544ec17ba870e97aa5672ed0162d
-Section: Themes
-Description: cj's Loading Animations
-Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjLoader/
-Name: cjLoader
-
-Package: com.cj81499.cjLoader
-Version: 2.0.0
-Architecture: iphoneos-arm64
-Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard
-Filename: ./debs/com.cj81499.cjLoader-2.0.0-iphoneos-arm64.deb
-Size: 26972
-MD5sum: fd93363151712319435bedfe188d8aaf
-SHA1: 6a48391d63fa88e0e99a214bc412f5cc173c0b63
-SHA256: d26e9d64e645a518e760e111f08f1ec857f13fbeea2562bd63731d97505a7e40
 Section: Themes
 Description: cj's Loading Animations
 Author: cj81499 <cjMakesIcons@gmail.com>
@@ -206,38 +142,6 @@ Author: cj81499 <cjMakesIcons@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjMandolino/
 Name: cj Mandolino
 
-Package: com.cj81499.cjMandolino
-Version: 2.0.0
-Architecture: iphoneos-arm
-Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard
-Filename: ./debs/com.cj81499.cjMandolino-2.0.0-iphoneos-arm.deb
-Size: 5052
-MD5sum: a395d0703c665766893808acc1b44cc1
-SHA1: b1dd2cd80e854ff964a1d56aff755db0a713eef4
-SHA256: 74816d1fa24e48d054a24493a2801ea7961951c88ba45fedcc4c1808e93dcb9c
-Section: Themes
-Description: cj's Mandolino Icons
-Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjMandolino/
-Name: cj Mandolino
-
-Package: com.cj81499.cjMandolino
-Version: 2.0.0
-Architecture: iphoneos-arm64
-Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard
-Filename: ./debs/com.cj81499.cjMandolino-2.0.0-iphoneos-arm64.deb
-Size: 5072
-MD5sum: 7a816bd93507bf37c061571b333b5792
-SHA1: b021d675ca2662973d696c7d4a6060ca5f253b52
-SHA256: 59273d94c02a2137ad18ce2e0c884d4c15e1c9de7943cc750097f77a43a7ba86
-Section: Themes
-Description: cj's Mandolino Icons
-Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjMandolino/
-Name: cj Mandolino
-
 Package: com.cj81499.cjOdin
 Version: 1.3.0
 Architecture: iphoneos-arm
@@ -254,36 +158,132 @@ Author: cj81499 <cjMakesIcons@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjOdin/
 Name: cj Odin
 
-Package: com.cj81499.cjOdin
+Package: com.cj81499.cjglyphs
 Version: 2.0.0
 Architecture: iphoneos-arm64
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
-Depends: com.spark.snowboard
-Filename: ./debs/com.cj81499.cjOdin-2.0.0-iphoneos-arm64.deb
-Size: 4160
-MD5sum: 9a68956e51a5d34890586c0229dd1e53
-SHA1: 04349d3a62929349501e868be6b6b448ef27c977
-SHA256: df8ff2f88d2d1a1f90c62383f89e1c43e56b0d5c1dd406e91e966164133409e1
+Depends: com.spark.snowboard, com.tokems.Glyphs
+Filename: ./debs/com.cj81499.cjglyphs-2.0.0-iphoneos-arm64.deb
+Size: 817652
+MD5sum: 1e97ef04be9a36dc27fa388a88da4a24
+SHA1: 579238a7b8934d7feb5171eb2b343fca41920baf
+SHA256: 22bfa40219243aface372f2e19f554215d3651afdeca7e607de99469511a2b23
 Section: Themes
-Description: cj's Odin Icons
+Description: cj's Glyphs
 Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjOdin/
-Name: cj Odin
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjglyphs/
+Name: cjGlyphs
 
-Package: com.cj81499.cjOdin
+Package: com.cj81499.cjglyphs
+Version: 2.0.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard, com.tokems.Glyphs
+Filename: ./debs/com.cj81499.cjglyphs-2.0.0-iphoneos-arm.deb
+Size: 816904
+MD5sum: 11cb90329da00d0744585e8c58e1c003
+SHA1: 5ba8afca5b32f485870d5081be06f384b1d42eb4
+SHA256: 651f6cd0c2efb2dbd0116d977c021ce360255cc0782443c97d232c21aaed762f
+Section: Themes
+Description: cj's Glyphs
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjglyphs/
+Name: cjGlyphs
+
+Package: com.cj81499.cjloader
 Version: 2.0.0
 Architecture: iphoneos-arm
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
 Depends: com.spark.snowboard
-Filename: ./debs/com.cj81499.cjOdin-2.0.0-iphoneos-arm.deb
-Size: 4140
-MD5sum: 7d9464065c804abdcfd79e18cb133c36
-SHA1: f19a5d346cbf16867ab069b4cb091e2816769a11
-SHA256: e4dab46f49f15488f159443f0c1baa9500e16edc2c8852e79717343bcb61a388
+Filename: ./debs/com.cj81499.cjloader-2.0.0-iphoneos-arm.deb
+Size: 26956
+MD5sum: ce5ba4d048b68106ec0cf0b5d9369cd4
+SHA1: 945fc3da8d62f1e0bf4063426d803b4078b8a7c3
+SHA256: 395b84119719dd577d485f3b85af149cbc415a3cbfe8165b31ed8ac0054427ba
+Section: Themes
+Description: cj's Loading Animations
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjloader/
+Name: cjLoader
+
+Package: com.cj81499.cjloader
+Version: 2.0.0
+Architecture: iphoneos-arm64
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.cjloader-2.0.0-iphoneos-arm64.deb
+Size: 26976
+MD5sum: 0e7bbe8f2515b3473126b61dd818b77b
+SHA1: 17fefa0b6ea8dc00e28c0feba046aa9e80e5db64
+SHA256: ac162a6cf7fb0e1dba9cb329c1ec971084a9ddd1470d2c828373c13e4b8085d5
+Section: Themes
+Description: cj's Loading Animations
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjloader/
+Name: cjLoader
+
+Package: com.cj81499.cjmandolino
+Version: 2.0.0
+Architecture: iphoneos-arm64
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.cjmandolino-2.0.0-iphoneos-arm64.deb
+Size: 5072
+MD5sum: fbdcd40a8a0eb41b1b9c42ca14666f4b
+SHA1: ba957172378b23b9f2079ee03797ef5f0733a9c5
+SHA256: 155c0995e92b6ecf37aed31756f565617f189a2178346dfe6c90e2d199ff1c27
+Section: Themes
+Description: cj's Mandolino Icons
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjmandolino/
+Name: cj Mandolino
+
+Package: com.cj81499.cjmandolino
+Version: 2.0.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.cjmandolino-2.0.0-iphoneos-arm.deb
+Size: 5052
+MD5sum: c663d17a7de47f1b9dc5b61d45bdb160
+SHA1: 943c2006ff2ee3ecd610ca04e19cb87c69e96b83
+SHA256: cf883baee4291ea430e18d48a165b943026ee184e92265879d1c5731b2f1253f
+Section: Themes
+Description: cj's Mandolino Icons
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjmandolino/
+Name: cj Mandolino
+
+Package: com.cj81499.cjodin
+Version: 2.0.0
+Architecture: iphoneos-arm64
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.cjodin-2.0.0-iphoneos-arm64.deb
+Size: 4160
+MD5sum: 26259bc9cf5e5d8bab7d867755d8e777
+SHA1: dc145893f74e02740bd8c70d2043111e1ecf7110
+SHA256: 659859f1c4927e684382f7953c86f951cc0eac063f4f2f571db7c13fe5128922
 Section: Themes
 Description: cj's Odin Icons
 Author: cj81499 <cjMakesIcons@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjOdin/
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjodin/
+Name: cj Odin
+
+Package: com.cj81499.cjodin
+Version: 2.0.0
+Architecture: iphoneos-arm
+Maintainer: cj81499 <cjMakesIcons@gmail.com>
+Depends: com.spark.snowboard
+Filename: ./debs/com.cj81499.cjodin-2.0.0-iphoneos-arm.deb
+Size: 4140
+MD5sum: 08a84d747bb1d423ef76b037530375c4
+SHA1: 2317f559e9287db84af6bc40188a407552b568b3
+SHA256: 195bd6c86e08e29ebbbaf1ba39f8165e157ef9d666aa25d6bb254d3cbc30a9db
+Section: Themes
+Description: cj's Odin Icons
+Author: cj81499 <cjMakesIcons@gmail.com>
+Depiction: https://cj81499.github.io/repo/depictions/com.cj81499.cjodin/
 Name: cj Odin
 
 Package: com.highdetalio.SpaceBlueBerry
@@ -302,36 +302,36 @@ Author: highdetalio <gionata.bottari@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.highdetalio.SpaceBlueBerry/
 Name: Space BlueBerry
 
-Package: com.highdetalio.SpaceBlueBerry
+Package: com.highdetalio.spaceblueberry
 Version: 2.0.0
 Architecture: iphoneos-arm64
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
 Depends: com.spark.snowboard
-Filename: ./debs/com.highdetalio.SpaceBlueBerry-2.0.0-iphoneos-arm64.deb
-Size: 170372
-MD5sum: b95a5466931eed371c127b7954b78f0c
-SHA1: 72e98b43d7307b751b28db6b4652d473818722c9
-SHA256: 9f5e7a88a6f99b415fda5287eaa35fb31e24899304db94e1a9780b8e31244389
+Filename: ./debs/com.highdetalio.spaceblueberry-2.0.0-iphoneos-arm64.deb
+Size: 170376
+MD5sum: 86e867b7949155c86173de6f61c94a70
+SHA1: db1fb5e03dea9711eed84ae84fc082f63ead1d06
+SHA256: aaccb9ff7fa9d30481ccdea7735c4ba1ae2176811bee00d5739ac9d317cb2962
 Section: Themes
 Description: highdetalio's Space BlueBerry
 Author: highdetalio <gionata.bottari@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.highdetalio.SpaceBlueBerry/
+Depiction: https://cj81499.github.io/repo/depictions/com.highdetalio.spaceblueberry/
 Name: Space BlueBerry
 
-Package: com.highdetalio.SpaceBlueBerry
+Package: com.highdetalio.spaceblueberry
 Version: 2.0.0
 Architecture: iphoneos-arm
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
 Depends: com.spark.snowboard
-Filename: ./debs/com.highdetalio.SpaceBlueBerry-2.0.0-iphoneos-arm.deb
+Filename: ./debs/com.highdetalio.spaceblueberry-2.0.0-iphoneos-arm.deb
 Size: 170356
-MD5sum: 5ed2c9e4f961f591386e72a98753c953
-SHA1: ffc097e7de1fb2b63708886c2fa7b26f6098ab09
-SHA256: af74a7fcdef71be22cf1b6fee9828bc52fd239c37c1624abf1c00a4f7d45ab42
+MD5sum: ae25f38d3c96c9155c126e485866a403
+SHA1: f3efdf4aa349f1afe6bae9a878cf0b2385383a3b
+SHA256: 6003d3e971ea411b2d06b37601cd27b985e4949ae962293fc49fb1889090fbcd
 Section: Themes
 Description: highdetalio's Space BlueBerry
 Author: highdetalio <gionata.bottari@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.highdetalio.SpaceBlueBerry/
+Depiction: https://cj81499.github.io/repo/depictions/com.highdetalio.spaceblueberry/
 Name: Space BlueBerry
 
 Package: com.jacopoiuytr.Mandolino
@@ -350,36 +350,36 @@ Author: jacopoiuytr <jacopocastagno@hotmail.it>
 Depiction: https://cj81499.github.io/repo/depictions/com.jacopoiuytr.Mandolino/
 Name: Mandolino
 
-Package: com.jacopoiuytr.Mandolino
+Package: com.jacopoiuytr.mandolino
 Version: 2.0.0
 Architecture: iphoneos-arm64
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
 Depends: com.spark.snowboard
-Filename: ./debs/com.jacopoiuytr.Mandolino-2.0.0-iphoneos-arm64.deb
+Filename: ./debs/com.jacopoiuytr.mandolino-2.0.0-iphoneos-arm64.deb
 Size: 141868
-MD5sum: 5e4d3d62bcb0db897747f070314c9aab
-SHA1: e371595cea9c5b4bdc420f7ffe565c187aaa7ec9
-SHA256: 1731d2cf33981ee3669c20d3483476993236029d5cd04bfb6ce6824f087a1262
+MD5sum: 963582d067bbaf4d3847f3ab788561f9
+SHA1: 98be6a8fbaaeff0615090a1243b77df02a632dcf
+SHA256: f57999dac07cab846da0ffd17f1b6aa4513464163669381e31e572acd10e267d
 Section: Themes
 Description: jacopoiuytr's Mandolino
 Author: jacopoiuytr <jacopocastagno@hotmail.it>
-Depiction: https://cj81499.github.io/repo/depictions/com.jacopoiuytr.Mandolino/
+Depiction: https://cj81499.github.io/repo/depictions/com.jacopoiuytr.mandolino/
 Name: Mandolino
 
-Package: com.jacopoiuytr.Mandolino
+Package: com.jacopoiuytr.mandolino
 Version: 2.0.0
 Architecture: iphoneos-arm
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
 Depends: com.spark.snowboard
-Filename: ./debs/com.jacopoiuytr.Mandolino-2.0.0-iphoneos-arm.deb
+Filename: ./debs/com.jacopoiuytr.mandolino-2.0.0-iphoneos-arm.deb
 Size: 141832
-MD5sum: e44036236cd333698ddb352d65d3fdbf
-SHA1: ee2fadd5e3bef663cfba8d47efce63fb14a38254
-SHA256: 7b052026ffcc2f7727c2aca352c8648f47f8e1133c72f18783ccb10e4adaafd4
+MD5sum: c95c74b5a56439e2bb2a395169a094a8
+SHA1: 2bd42b537f2b4beafecbbe2ed29091fc4a42d68b
+SHA256: 9572a1b849279c66d2172abca113e67a03fb2b77c76d9491fe6d67bcbdb66acb
 Section: Themes
 Description: jacopoiuytr's Mandolino
 Author: jacopoiuytr <jacopocastagno@hotmail.it>
-Depiction: https://cj81499.github.io/repo/depictions/com.jacopoiuytr.Mandolino/
+Depiction: https://cj81499.github.io/repo/depictions/com.jacopoiuytr.mandolino/
 Name: Mandolino
 
 Package: com.tokems.Glyphs
@@ -414,35 +414,35 @@ Author: tokems <tokems.0@gmail.com>
 Depiction: https://cj81499.github.io/repo/depictions/com.tokems.Glyphs/
 Name: Glyphs
 
-Package: com.tokems.Glyphs
+Package: com.tokems.glyphs
 Version: 2.0.0
 Architecture: iphoneos-arm
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
 Depends: com.spark.snowboard
-Filename: ./debs/com.tokems.Glyphs-2.0.0-iphoneos-arm.deb
+Filename: ./debs/com.tokems.glyphs-2.0.0-iphoneos-arm.deb
 Size: 300616
-MD5sum: 0f2439966f61359dd16988479c4d75b0
-SHA1: 5de8838d64ad0208deb746288f373c7d40cc73c5
-SHA256: 2484a7ee761df4e8a977c253077c79a3d4bac8bce401d7accbcaffb5a7c4fb0f
+MD5sum: b9167ab61b3361de30baa138ef13342f
+SHA1: abfef90d76df16ff835aa3618878f297efefbcdd
+SHA256: 1e365df12f6b886c8b87d8e7744d75e5522112f930558152d0c816fbfe1b8ce4
 Section: Themes
 Description: tokems' Glyphs
 Author: tokems <tokems.0@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.tokems.Glyphs/
+Depiction: https://cj81499.github.io/repo/depictions/com.tokems.glyphs/
 Name: Glyphs
 
-Package: com.tokems.Glyphs
+Package: com.tokems.glyphs
 Version: 2.0.0
 Architecture: iphoneos-arm64
 Maintainer: cj81499 <cjMakesIcons@gmail.com>
 Depends: com.spark.snowboard
-Filename: ./debs/com.tokems.Glyphs-2.0.0-iphoneos-arm64.deb
+Filename: ./debs/com.tokems.glyphs-2.0.0-iphoneos-arm64.deb
 Size: 300848
-MD5sum: 449a3acb4d245e7cba00469531afda04
-SHA1: ff7a6f258b61752635abd7344fd036cd39c26b48
-SHA256: 1d7eaf1cc15e67048c2cdf850359301d787ee3820e1accfa5ebbc3dd423df363
+MD5sum: ad8e716c7b9530f6f489231f12d09c65
+SHA1: 83694c8256a9a46b497f7e120fe44f4c5079ac55
+SHA256: 186a99bcc3daced5efed482036dc4598086bf32a0c0c09bfcf29aba51ab0b7a7
 Section: Themes
 Description: tokems' Glyphs
 Author: tokems <tokems.0@gmail.com>
-Depiction: https://cj81499.github.io/repo/depictions/com.tokems.Glyphs/
+Depiction: https://cj81499.github.io/repo/depictions/com.tokems.glyphs/
 Name: Glyphs
 
