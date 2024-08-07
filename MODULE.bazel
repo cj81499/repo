@@ -23,6 +23,7 @@ python.toolchain(
     is_default = True,
     # configure_coverage_tool = True, # https://rules-python.readthedocs.io/en/latest/coverage.html
 )
+use_repo(python, "python_3_12")
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
 pip.parse(
     hub_name = "pip",
