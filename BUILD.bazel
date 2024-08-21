@@ -1,4 +1,7 @@
+load("@npm//:defs.bzl", "npm_link_all_packages")
 load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+
+npm_link_all_packages(name = "node_modules")
 
 compile_pip_requirements(
     name = "py_requirements",
@@ -7,4 +10,19 @@ compile_pip_requirements(
         "--strip-extras",  # becoming the default in piptools compile v8.0.0
     ],
     requirements_txt = "py_requirements_lock.txt",
+)
+
+alias(
+    name = "python",
+    actual = "@python_3_12//:python3",
+)
+
+alias(
+    name = "node",
+    actual = "@nodejs//:node",
+)
+
+alias(
+    name = "pnpm",
+    actual = "@pnpm//:pnpm",
 )

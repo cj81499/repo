@@ -1,0 +1,46 @@
+load("@bazel_skylib//rules:common_settings.bzl", "string_flag")
+load("@npm//:defs.bzl", "npm_link_all_packages")
+load("@npm//website:@11ty/eleventy/package_json.bzl", eleventy_bin = "bin")
+
+string_flag(
+    name = "path_prefix",
+    build_setting_default = "",
+    make_variable = "PATH_PREFIX",
+    visibility = ["//visibility:public"],
+)
+
+npm_link_all_packages(name = "node_modules")
+
+# TODO: build Packages/Packages.gz
+
+filegroup(
+    name = "srcs",
+    srcs = [
+        "eleventy.config.js",
+        "package.json",
+    ] + glob(["src/**"]),
+)
+
+eleventy_bin.eleventy(
+    name = "website",
+    srcs = [
+        ":node_modules/@11ty/eleventy",
+        ":srcs",
+    ],
+    chdir = package_name(),
+    env = {"PATH_PREFIX": "$(PATH_PREFIX)"},
+    out_dirs = ["_site"],
+    toolchains = [":path_prefix"],
+)
+
+eleventy_bin.eleventy_binary(
+    name = "serve",
+    args = ["--serve"],
+    chdir = package_name(),
+    data = [
+        ":node_modules/@11ty/eleventy",
+        ":srcs",
+    ],
+    env = {"PATH_PREFIX": "$(PATH_PREFIX)"},
+    toolchains = [":path_prefix"],
+)

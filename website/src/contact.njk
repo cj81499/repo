@@ -1,3 +1,6 @@
+---
+title: Contact
+contact:
 - title: "Email"
   text: "cjMakesIcons@gmail.com"
   link: "mailto:cjMakesIcons@gmail.com"
@@ -22,3 +25,16 @@
   link: "https://github.com/cj81499"
   icon:
     class: "fab fa-github"
+---
+
+{% for service in contact %}
+<p>
+  <i
+    class="{{ service.icon.class }}"
+    data-fa-transform="{{ service.icon.transform }}"
+    data-fa-mask="{{ service.icon.mask }}"
+  ></i>
+  {{ service.title }}
+  <a href="{{ service.link }}">{{ service.text }}</a>
+</p>
+{% endfor %}

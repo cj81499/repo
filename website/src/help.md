@@ -1,5 +1,5 @@
 ---
-title: "Help"
+title: Help
 ---
 
 ## General Advice
@@ -24,4 +24,4 @@ title: "Help"
 
 ## It's still not working
 
-- [Contact Me]({{ "/contact" | relative_url }})
+- [Contact Me](contact.njk)
