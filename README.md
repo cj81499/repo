@@ -10,14 +10,16 @@ Home of [cjGlyphs](https://www.reddit.com/r/iOSthemes/comments/2r45jz/custom_gly
 git config core.hooksPath .githooks
 ```
 
-## Update Packages
-
-```shell
-./ez_pkg.sh
-```
-
+<!-- FIXME: bazel-ify -->
 ## Compress Images
 
 ```shell
 ./png_compress.sh
 ```
+
+## Publish workflow idea
+
+- GitHub actions workflow to build & publish GitHub release
+- bazel `http_archive` to "consume" published `.deb`
+- bazel build of site that uses the `.deb`s stored on GitHub (NOT in git repo though!!!)
+  - ideally, `.deb`s are **not** needed when developing (only when building for website release/publish/deploy to GH pages)
