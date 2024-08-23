@@ -25,7 +25,6 @@ jobs:
           #   build --config=ci
           bazelrc: |
             build --color=yes
-            build --show_timestamps
 
       - name: build
         run: bazel build //...
