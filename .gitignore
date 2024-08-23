@@ -4,3 +4,5 @@ bazel-*
 .venv/
 
 _site/
+
+rust-project.json

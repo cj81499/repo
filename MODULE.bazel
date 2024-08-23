@@ -38,6 +38,17 @@ use_repo(pip, "pip")
 # ========================
 bazel_dep(name = "aspect_bazel_lib", version = "2.7.9")
 
+# ==================
+# === rules_rust ===
+# ==================
+bazel_dep(name = "rules_rust", version = "0.49.1")
+crate = use_extension("@rules_rust//crate_universe:docs_bzlmod.bzl", "crate")
+crate.from_cargo(
+    cargo_lockfile = "//:Cargo.lock",
+    manifests = ["//:Cargo.toml"],
+)
+use_repo(crate, "crates")
+
 # TODO
 # =========================
 # === aspect_rules_lint ===
