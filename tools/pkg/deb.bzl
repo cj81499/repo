@@ -15,24 +15,19 @@ def _pkg_deb_rule_impl(ctx):
     control_tar = ctx.file.control_tar
     data_tar = ctx.file.data_tar
 
-    debian_binary = ctx.actions.declare_file("debian-binary")
-    ctx.actions.write(debian_binary, "2.0\n")
-
     args = ctx.actions.args()
     args.add_all([
         out.path,
-        debian_binary.path,
         control_tar,
         data_tar,
     ])
     ctx.actions.run(
         outputs = [out],
         inputs = [
-            debian_binary,
             control_tar,
             data_tar,
         ],
-        executable = ctx.executable._ar,
+        executable = ctx.executable._make_deb,
         arguments = [args],
     )
 
@@ -44,8 +39,8 @@ _pkg_deb_rule = rule(
         "control_tar": attr.label(allow_single_file = [".tar", ".tar.gz", ".tar.xz", ".tar.zst)"], mandatory = True),
         "data_tar": attr.label(allow_single_file = [".tar", ".tar.gz", ".tar.xz", ".tar.zst", ".tar.bz2", ".tar.lzma"], mandatory = True),
         "out": attr.output(mandatory = True),
-        "_ar": attr.label(
-            default = Label("//tools/pkg:ar"),
+        "_make_deb": attr.label(
+            default = Label("//tools/pkg:make_deb"),
             allow_single_file = True,
             executable = True,
             cfg = "exec",

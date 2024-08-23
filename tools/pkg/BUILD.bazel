@@ -1,8 +1,8 @@
 load("@rules_rust//rust:defs.bzl", "rust_binary")
 
 rust_binary(
-    name = "ar",
-    srcs = ["ar.rs"],
+    name = "make_deb",
+    srcs = ["make_deb.rs"],
     deps = [
         "@crates//:ar",
         "@crates//:clap",
