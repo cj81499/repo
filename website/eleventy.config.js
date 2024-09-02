@@ -1,10 +1,13 @@
 import { EleventyHtmlBasePlugin, IdAttributePlugin, InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+
 
 const _INPUT_DIR = "src";
 const _PATH_PREFIX = process.env["PATH_PREFIX"];
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default function (eleventyConfig) {
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(IdAttributePlugin);
     eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);

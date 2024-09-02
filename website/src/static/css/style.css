@@ -154,7 +154,7 @@ header nav.navbar li {
     display: flex
 }
 
-header nav.navbar li.active {
+header nav.navbar li[aria-current="page"] {
     background: #0c9
 }
 

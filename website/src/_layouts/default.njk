@@ -37,16 +37,12 @@
         </label>
 
         <nav class="navbar">
-            {# TODO: use eleventy's navigation plugin #}
-            <ul class="nav-links">
-                <!-- FIXME: active ONLY on active page -->
-                <li class="active">
-                    <a href="index.html">Repo</a>
-                </li>
-                <!-- FIXME: active ONLY on active page -->
-                <li class="active">
-                    <a href="contact.njk">Contact</a>
-                </li>
+            <ul role="list" class="nav-links">
+            {%- for entry in collections.all | eleventyNavigation %}
+            <li{% if entry.url == page.url %} aria-current="page"{% endif %}>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+            {%- endfor %}
             </ul>
         </nav>
     </header>

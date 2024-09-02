@@ -1,5 +1,7 @@
 ---
 title: Help
+eleventyNavigation:
+  key: Help
 ---
 
 ## General Advice

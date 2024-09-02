@@ -3,6 +3,7 @@
 	"name": "website",
 	"devDependencies": {
 		"@11ty/eleventy": "3.0.0-beta.1",
+		"@11ty/eleventy-navigation": "^0.3.5",
 		"yaml": "^2.5.0"
 	}
 }
