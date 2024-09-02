@@ -16,9 +16,6 @@ importers:
       '@11ty/eleventy-navigation':
         specifier: ^0.3.5
         version: 0.3.5
-      yaml:
-        specifier: ^2.5.0
-        version: 2.5.0
 
 packages:
 
@@ -1370,10 +1367,4 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
-    dev: true
-
-  /yaml@2.5.0:
-    resolution: {integrity: sha512-2wWLbGbYDiSqqIKoPjar3MPgB94ErzCtrNE1FdqGuaO0pi2JGjmE8aW8TDZwzU7vuxcGRdL/4gPQwQ7hD5AMSw==}
-    engines: {node: '>= 14'}
-    hasBin: true
     dev: true
