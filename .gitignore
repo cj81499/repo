@@ -4,3 +4,4 @@ bazel-*
 .venv/
 
 _site/
+node_modules/

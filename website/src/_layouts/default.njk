@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <title>{{ title }}</title>
+
+    {# TODO: https://www.11ty.dev/docs/assets/#adding-css-javascript-fonts #}
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet" />
+
+    <script crossorigin="anonymous" defer src="https://kit.fontawesome.com/96b2a4e9cf.js"></script>
+
+    {# TODO: working favicon #}
+    {#
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    #}
+</head>
+
+<body>
+    <header>
+        <a class="header-brand" href="index.html">
+            {# TODO: https://www.11ty.dev/docs/plugins/image/ #}
+            <img alt="cj Logo" src="/static/images/logo/cj.svg">
+        </a>
+
+        <input aria-label="Toggle Navigation" id="toggle-nav-checkbox" type="checkbox">
+        <label class="toggle-nav" for="toggle-nav-checkbox">
+            <span class="toggle-nav-icon"></span>
+        </label>
+
+        <nav class="navbar">
+            <ul role="list" class="nav-links">
+            {%- for entry in collections.all | eleventyNavigation %}
+            <li{% if entry.url == page.url %} aria-current="page"{% endif %}>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+            {%- endfor %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% if title %}<h1>{{ title }}</h1>{% endif %}
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <a href="contact.njk">Cal Jacobson</a></p>
+    </footer>
+</body>
+
+</html>
