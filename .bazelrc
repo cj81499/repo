@@ -9,6 +9,7 @@ import %workspace%/.aspect/bazelrc/javascript.bazelrc
 import %workspace%/.aspect/bazelrc/performance.bazelrc
 
 ### YOUR PROJECT SPECIFIC OPTIONS GO HERE ###
+# common --strategy=sandboxed
 
 # FIXME: aspect's rules are a good starting point, but I don't like all of 'em.
 # I ought to write my own (based on theirs).
