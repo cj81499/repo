@@ -13,8 +13,7 @@ import %workspace%/.aspect/bazelrc/performance.bazelrc
 # FIXME: aspect's rules are a good starting point, but I don't like all of 'em.
 # I ought to write my own (based on theirs).
 
-# enable rustfmt
-# TODO: should this use aspect_rules_lint instead...?
+# enable rustfmt - consider using aspect_rules_lint instead
 build:check_format --aspects=@rules_rust//rust:defs.bzl%rustfmt_aspect
 build:check_format --output_groups=+rustfmt_checks
 
