@@ -4,6 +4,7 @@
         ".aspect/bazelrc": true
     },
     "cSpell.words": [
+        "Arfile",
         "runfile",
         "runfiles"
     ],

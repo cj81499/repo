@@ -1,8 +1,10 @@
-load("@bazel_skylib//rules:write_file.bzl", "write_file")
+load("@rules_rust//rust:defs.bzl", "rust_binary")
 
-write_file(
-    name = "debian_binary",
-    out = "debian-binary",
-    content = ["2.0\n"],
-    visibility = ["//visibility:public"],
+rust_binary(
+    name = "make_deb",
+    srcs = ["make_deb.rs"],
+    deps = [
+        "@crates//:ar",
+        "@crates//:clap",
+    ],
 )

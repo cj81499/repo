@@ -8,3 +8,8 @@ compile_pip_requirements(
     ],
     requirements_txt = "py_requirements_lock.txt",
 )
+
+alias(
+    name = "python3",
+    actual = "@python_3_12//:python3",
+)
