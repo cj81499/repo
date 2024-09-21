@@ -5,7 +5,9 @@ npm_link_all_packages(name = "node_modules")
 
 compile_pip_requirements(
     name = "py_requirements",
-    src = "py_requirements.in",
+    srcs = [
+        "//tools/pkg/scanpackages:pyproject.toml",
+    ],
     extra_args = [
         "--strip-extras",  # becoming the default in piptools compile v8.0.0
     ],

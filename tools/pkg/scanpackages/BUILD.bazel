@@ -1,0 +1,12 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+
+exports_files(["pyproject.toml"])
+
+py_binary(
+    name = "scanpackages",
+    srcs = ["scanpackages.py"],
+    deps = [
+        "@pip//click",
+        "@pip//pydpkg",
+    ],
+)

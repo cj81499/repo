@@ -19,6 +19,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy(`${_INPUT_DIR}/Packages`)
     eleventyConfig.addPassthroughCopy(`${_INPUT_DIR}/Packages.gz`)
     eleventyConfig.addPassthroughCopy(`${_INPUT_DIR}/CydiaIcon.png`)
+    eleventyConfig.addPassthroughCopy(`${_INPUT_DIR}/debs`)
 };
 
 export const config = {

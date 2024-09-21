@@ -4,11 +4,17 @@
         ".aspect/bazelrc": true
     },
     "cSpell.words": [
+        "dpkg",
+        "pydpkg",
         "runfile",
-        "runfiles"
+        "runfiles",
+        "scanpackages"
     ],
     "files.associations": {
         ".envrc*": "shellscript",
         ".bazelrc": "shellscript"
     },
+    "evenBetterToml.formatter.arrayAutoCollapse": false,
+    "evenBetterToml.formatter.arrayTrailingComma": true,
+    "evenBetterToml.formatter.allowedBlankLines": 1,
 }

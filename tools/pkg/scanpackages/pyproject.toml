@@ -1,0 +1,8 @@
+[project]
+name = "scanpackages"
+version = "0.0.0"
+
+dependencies = [
+    "click",
+    "pydpkg",
+]

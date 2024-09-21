@@ -1,6 +1,9 @@
+load("@aspect_bazel_lib//lib:copy_file.bzl", "copy_file")
 load("@bazel_skylib//rules:common_settings.bzl", "string_flag")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 load("@npm//website:@11ty/eleventy/package_json.bzl", eleventy_bin = "bin")
+load("@rules_gzip//gzip/compress:defs.bzl", "gzip_compress")
+load("//tools/pkg/scanpackages:packages.bzl", "packages_file")
 
 string_flag(
     name = "path_prefix",
@@ -11,23 +14,9 @@ string_flag(
 
 npm_link_all_packages(name = "node_modules")
 
-# TODO: build Packages/Packages.gz
-
-filegroup(
-    name = "srcs",
-    srcs = [
-        "eleventy.config.js",
-        "package.json",
-    ] + glob(["src/**"]),
-)
-
 eleventy_bin.eleventy(
     name = "website",
-    srcs = [
-        ":node_modules/@11ty/eleventy",
-        ":node_modules/@11ty/eleventy-navigation",
-        ":srcs",
-    ],
+    srcs = [":inputs"],
     chdir = package_name(),
     env = {"PATH_PREFIX": "$(PATH_PREFIX)"},
     out_dirs = ["_site"],
@@ -38,11 +27,58 @@ eleventy_bin.eleventy_binary(
     name = "serve",
     args = ["--serve"],
     chdir = package_name(),
-    data = [
-        ":node_modules/@11ty/eleventy",
-        ":node_modules/@11ty/eleventy-navigation",
-        ":srcs",
-    ],
+    data = [":inputs"],
     env = {"PATH_PREFIX": "$(PATH_PREFIX)"},
     toolchains = [":path_prefix"],
+)
+
+filegroup(
+    name = "inputs",
+    srcs = [
+        "eleventy.config.js",
+        "package.json",
+        ":debs",
+        ":node_modules/@11ty/eleventy",
+        ":node_modules/@11ty/eleventy-navigation",
+        ":src_Packages",
+        ":src_Packages.gz",
+        ":srcs",
+    ],
+)
+
+# Packages and Packages.gz must be in the src directory
+[
+    copy_file(
+        name = "src_%s" % f,
+        src = ":%s" % f,
+        out = "src/%s" % f,
+    )
+    for f in ("Packages", "Packages.gz")
+]
+
+gzip_compress(
+    name = "Packages.gz",
+    src = ":Packages",
+    visibility = ["//website:__pkg__"],
+)
+
+packages_file(
+    name = "Packages",
+    srcs = [":debs"],
+    out = "Packages",
+    relative_to = package_name() + "/src",
+    visibility = ["//website:__pkg__"],
+)
+
+filegroup(
+    name = "srcs",
+    srcs = glob(
+        ["src/**"],
+        exclude = [":debs"],
+    ),
+)
+
+filegroup(
+    name = "debs",
+    srcs = glob(["src/debs/**/*.deb"]),
 )
