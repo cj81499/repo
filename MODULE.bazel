@@ -1,5 +1,7 @@
 "Bazel dependencies"
 
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
 # ====================
 # === bazel_skylib ===
 # ====================
@@ -45,3 +47,12 @@ bazel_dep(name = "aspect_bazel_lib", version = "2.7.9")
 # # Next, follow the install instructions for
 # # - linting: https://github.com/aspect-build/rules_lint/blob/v1.0.0-rc7/docs/linting.md
 # # - formatting: https://github.com/aspect-build/rules_lint/blob/v1.0.0-rc7/docs/formatting.md
+
+http_archive(
+    name = "oxipng",
+    urls = ["https://github.com/shssoichiro/oxipng/releases/download/v9.1.2/oxipng-9.1.2-x86_64-unknown-linux-gnu.tar.gz"],
+    # build_file = "@//tools:zopfli.BUILD",
+    strip_prefix = "oxipng-9.1.2-x86_64-unknown-linux-gnu",
+    integrity = "sha256-bUdFP2I9fRJJniBv4In+ltdrxvAaAJYrkeTuPmhF4aY=",
+    build_file_content = 'exports_files(["oxipng"])',
+)
