@@ -17,14 +17,7 @@ updates:
     # cooldown:
     #   default-days: 7
 
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    cooldown:
-      default-days: 7
-
-  - package-ecosystem: "uv"
+  - package-ecosystem: "pip" # TODO: consider "uv" instead
     directory: "/"
     schedule:
       interval: "weekly"
