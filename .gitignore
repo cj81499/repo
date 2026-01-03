@@ -1,5 +1,5 @@
 bazel-*
-.aspect/bazelrc/user.bazelrc
+user.bazelrc
 
 .venv/
 
