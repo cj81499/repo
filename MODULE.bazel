@@ -1,14 +1,12 @@
 "Bazel dependencies"
 
-_RULES_PYTHON_VERSION = "1.8.0-rc1"
-
 bazel_dep(name = "aspect_bazel_lib", version = "2.22.2")
 bazel_dep(name = "bazel_skylib", version = "1.9.0")
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.8.0")
 bazel_dep(name = "gazelle", version = "0.47.0")
 bazel_dep(name = "rules_pkg", version = "1.2.0")
-bazel_dep(name = "rules_python_gazelle_plugin", version = _RULES_PYTHON_VERSION)
-bazel_dep(name = "rules_python", version = _RULES_PYTHON_VERSION)
+bazel_dep(name = "rules_python_gazelle_plugin", version = "1.8.0-rc0")
+bazel_dep(name = "rules_python", version = "1.8.0-rc0")
 
 # Python setup
 PY_VERSION = "3.14.2"
