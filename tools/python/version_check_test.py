@@ -19,9 +19,13 @@ class PythonVersionFinder(ast.NodeVisitor):
 
 
 def test_version():
-    # read version from MODULE.bazel
-    module_bazel_contents = Path("MODULE.bazel").read_text()
-    parsed = ast.parse(module_bazel_contents)
+    # read content of MODULE.bazel
+    content = Path("MODULE.bazel").read_bytes()
+
+    # parse content as python ast
+    parsed = ast.parse(content)
+
+    # find PY_VERSION assignment
     pvf = PythonVersionFinder()
     pvf.visit(parsed)
     py_version = pvf.version
@@ -32,5 +36,4 @@ def test_version():
 
 
 if __name__ == "__main__":
-    # raise SystemExit(1)
     raise SystemExit(pytest.main(sys.argv))
