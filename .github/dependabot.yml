@@ -14,6 +14,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      rules-python:
+        patterns:
+          - "rules_python*"
     # cooldown:
     #   default-days: 7
 
