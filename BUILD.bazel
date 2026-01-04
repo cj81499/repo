@@ -1,4 +1,21 @@
+load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
+load("@pypi//:requirements.bzl", "all_whl_requirements")
 load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+load("@rules_python_gazelle_plugin//manifest:defs.bzl", "gazelle_python_manifest")
+load("@rules_python_gazelle_plugin//modules_mapping:def.bzl", "modules_mapping")
+
+gazelle_binary(
+    name = "gazelle_multilang",
+    languages = [
+        "@rules_python_gazelle_plugin//python",
+    ],
+)
+
+# gazelle:exclude .venv
+gazelle(
+    name = "gazelle",
+    gazelle = ":gazelle_multilang",
+)
 
 compile_pip_requirements(
     name = "py_requirements",
@@ -8,3 +25,27 @@ compile_pip_requirements(
     ],
     requirements_txt = "py_requirements_lock.txt",
 )
+
+modules_mapping(
+    name = "modules_map",
+    include_stub_packages = True,
+    wheels = all_whl_requirements,
+)
+
+# Gazelle python extension needs a manifest file mapping from
+# an import to the installed package that provides it.
+# This macro produces two targets:
+# - //:gazelle_python_manifest.update can be used with `bazel run`
+#   to recalculate the manifest
+# - //:gazelle_python_manifest.test is a test target ensuring that
+#   the manifest doesn't need to be updated
+gazelle_python_manifest(
+    name = "gazelle_python_manifest",
+    modules_mapping = ":modules_map",
+    pip_repository_name = "pypi",
+    requirements = "//:py_requirements_lock.txt",
+)
+
+exports_files([
+    "MODULE.bazel",
+])
