@@ -1,3 +1,5 @@
+"""Test that the Python version specified in MODULE.bazel matches the current runtime version."""
+
 import ast
 import sys
 from pathlib import Path
