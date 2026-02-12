@@ -4,6 +4,7 @@
   "mode": "fix",
   "lint": "fix",
   "warningsList": [
+    "allowed-symbol-load-locations",
     "attr-applicable_licenses",
     "attr-cfg",
     "attr-license",
@@ -13,6 +14,7 @@
     "attr-single-file",
     "build-args-kwargs",
     "bzl-visibility",
+    "canonical-repository",
     "confusing-name",
     "constant-glob",
     "ctx-actions",
@@ -24,6 +26,7 @@
     "dict-concatenation",
     "dict-method-named-arg",
     "duplicated-name",
+    "external-path",
     "filetype",
     "function-docstring",
     "function-docstring-args",
