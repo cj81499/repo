@@ -4,3 +4,5 @@ user.bazelrc
 .venv/
 
 _site/
+
+.claude/settings.local.json
