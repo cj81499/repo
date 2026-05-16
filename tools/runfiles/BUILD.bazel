@@ -1,0 +1,19 @@
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
+
+py_library(
+    name = "runfiles",
+    srcs = ["__init__.py"],
+    visibility = ["//visibility:public"],
+    deps = ["@rules_python//python/runfiles"],
+)
+
+py_test(
+    name = "runfiles_test",
+    size = "small",
+    srcs = ["runfiles_test.py"],
+    data = ["runfiles_test_data.txt"],
+    deps = [
+        ":runfiles",
+        "@pip//pytest",
+    ],
+)
