@@ -14,4 +14,3 @@ manifest:
     pytest: pytest
   pip_repository:
     name: pypi
-integrity: d1c7b3916e7481d4b49a7b98d2dd1b714b1dc20b6b655ce38bb0acb0f734a8dd

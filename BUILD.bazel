@@ -43,7 +43,11 @@ gazelle_python_manifest(
     name = "gazelle_python_manifest",
     modules_mapping = ":modules_map",
     pip_repository_name = "pypi",
-    requirements = "//:py_requirements_lock.txt",
+    # We do not provide the requirements argument, so the integrity field is not
+    # set in `gazelle_python.yaml`.
+    # Pro: Fewer merge conflicts and dependabot can upgrade python deps.
+    # Con: Slower `//:gazelle_python_manifest.test` (cannot simply check the
+    # integrity field). In practice, it's still very fast.
 )
 
 exports_files([
