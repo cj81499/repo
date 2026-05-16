@@ -2,7 +2,6 @@
 
 version: 2
 updates:
-
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -10,18 +9,19 @@ updates:
     cooldown:
       default-days: 7
 
-  - package-ecosystem: "bazel"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    groups:
-      rules-python:
-        patterns:
-          - "rules_python*"
-    # cooldown:
-    #   default-days: 7
+  # Not working. See: https://github.com/dependabot/dependabot-core/issues/13880
+  # - package-ecosystem: "bazel" # zizmor: ignore[dependabot-cooldown] bazel ecosystem does not support
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
+  #   groups:
+  #     rules-python:
+  #       patterns:
+  #         - "rules_python*"
+  #   # cooldown:
+  #   #   default-days: 7
 
-  - package-ecosystem: "pip" # TODO: consider "uv" instead
+  - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: "weekly"
