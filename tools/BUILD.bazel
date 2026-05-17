@@ -4,3 +4,8 @@ bazelrc_preset(
     name = "preset",
     strict = True,
 )
+
+alias(
+    name = "oxipng",
+    actual = "@oxipng//:oxipng_bin",
+)
