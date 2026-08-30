@@ -1,12 +1,17 @@
 "Bazel dependencies"
 
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+_RULES_PYTHON_VERSION = "2.0.1"
+
 bazel_dep(name = "aspect_bazel_lib", version = "2.22.5")
 bazel_dep(name = "bazel_skylib", version = "1.9.0")
 bazel_dep(name = "bazelrc-preset.bzl", version = "1.9.2")
 bazel_dep(name = "gazelle", version = "0.51.0")
 bazel_dep(name = "rules_pkg", version = "1.2.0")
-bazel_dep(name = "rules_python_gazelle_plugin", version = "2.0.1")
-bazel_dep(name = "rules_python", version = "2.0.1")
+bazel_dep(name = "rules_python", version = _RULES_PYTHON_VERSION)
+
+bazel_dep(name = "rules_python_gazelle_plugin", version = _RULES_PYTHON_VERSION, dev_dependency = True)
 
 # Python setup
 PY_VERSION = "3.14.2"
@@ -26,3 +31,21 @@ use_repo(pip, "pypi")
 
 # TODO: aspect_rules_lint for ruff (and/or other linters?)
 # TODO: mypy
+
+OXIPNG_VERSION = "10.1.1"
+
+http_archive(
+    name = "oxipng",
+    build_file_content = """\
+load("@bazel_skylib//rules:native_binary.bzl", "native_binary")
+
+native_binary(
+    name = "oxipng_bin",
+    src = "oxipng",
+    visibility = ["//visibility:public"],
+)
+""",
+    integrity = "sha256-WYg5Loj8PQP1YvLVZeXBKglSI66L2YNXbyqv8vrfNzg=",
+    strip_prefix = "oxipng-{VERSION}-x86_64-unknown-linux-gnu".replace("{VERSION}", OXIPNG_VERSION),
+    urls = ["https://github.com/shssoichiro/oxipng/releases/download/v{VERSION}/oxipng-{VERSION}-x86_64-unknown-linux-gnu.tar.gz".replace("{VERSION}", OXIPNG_VERSION)],
+)

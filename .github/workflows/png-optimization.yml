@@ -1,0 +1,58 @@
+name: PNG optimization
+
+on:
+  pull_request:
+
+permissions: {}
+
+jobs:
+  oxipng:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source tree
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup bazel/bazelisk
+        uses: bazel-contrib/setup-bazel@8cb04a772ab4c1eb984e9c1b493a182e96c5e425 # 0.19.0
+        with:
+          bazelisk-cache: true
+          disk-cache: ${{ github.workflow }}
+          external-cache: true
+          repository-cache: true
+          bazelrc: |
+            build --color=yes
+
+      - name: Check changed PNGs
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+
+          pngs=()
+
+          # --diff-filter=ACMRT includes added, copied, modified, renamed, and
+          # type-changed files. Deleted files are excluded because oxipng cannot
+          # run on files that no longer exist.
+          while IFS= read -r -d '' file; do
+            if [[ -f "$file" && "${file,,}" == *.png ]]; then
+              pngs+=("$file")
+            fi
+          done < <(git diff --name-only -z --diff-filter=ACMRT "$BASE_SHA" HEAD)
+
+          if (( ${#pngs[@]} == 0 )); then
+            echo "No changed PNG files to check."
+            exit 0
+          fi
+
+          bazel run //tools:oxipng -- -o max --strip safe -- "${pngs[@]}"
+
+          if ! git diff --exit-code -- "${pngs[@]}"; then
+            echo
+            echo "oxipng optimized one or more changed PNG files."
+            echo "Run this locally and commit the optimized files:"
+            echo 'bazel run //tools:oxipng -- -o max --strip safe -- <changed PNG files>'
+            exit 1
+          fi
